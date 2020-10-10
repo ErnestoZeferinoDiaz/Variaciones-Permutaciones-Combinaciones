@@ -19,6 +19,7 @@ int main(){
     
     printfVariacionCR(items,n,r);
     printfVariacionSR(items,n,r);
+    printfPermutacionCirc(items,n,r);
     printfCombinacionCR(items,n,r);
     printfCombinacionSR(items,n,r);
 

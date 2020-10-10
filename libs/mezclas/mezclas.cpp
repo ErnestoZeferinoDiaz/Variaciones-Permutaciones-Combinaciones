@@ -51,6 +51,12 @@ void variacionSR(char* items,char** almacen,int n,int r,int* indexs,int i,int *c
     }
 }
 
+void permutacionCirc(char* items,char** almacen,int n,int r,int* indexs,int i,int *cont){
+    initParams(r,&indexs,&cont);
+    indexs[i] = 0;
+    variacionSR(items,almacen,n,r,indexs,i+1,cont);
+}
+
 void combinacionCR(char* items,char** almacen,int n,int r,int* indexs,int i,int *cont){
     if(i<r){
         if(i==0){

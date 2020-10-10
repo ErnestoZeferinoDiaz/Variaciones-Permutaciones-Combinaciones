@@ -16,6 +16,15 @@ void printfVariacionSR(char* items,int n,int r){
     printMatriz(matriz,size,r);
 }
 
+void printfPermutacionCirc(char* items,int n,int r){
+    char** matriz;
+    int size;
+    size = fact(n-1);
+    matriz = initMatriz(size,n);
+    permutacionCirc(items,matriz,n,n,NULL,0,NULL);
+    printMatriz(matriz,size,n);
+}
+
 void printfCombinacionCR(char* items,int n,int r){
     char** matriz;
     int size;
