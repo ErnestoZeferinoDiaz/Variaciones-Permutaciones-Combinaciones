@@ -7,6 +7,15 @@ void printfVariacionCR(char* items,int n,int r){
     printMatriz(matriz,size,r);
 }
 
+void printfVariacionSR(char* items,int n,int r){
+    char** matriz;
+    int size;
+    size = fact(n)/fact(n-r);
+    matriz = initMatriz(size,r);
+    variacionSR(items,matriz,n,r,NULL,0,NULL);
+    printMatriz(matriz,size,r);
+}
+
 void printfCombinacionCR(char* items,int n,int r){
     char** matriz;
     int size;

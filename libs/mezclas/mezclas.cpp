@@ -26,6 +26,31 @@ void variacionCR(char* items,char** almacen,int n,int r,int* indexs,int i,int *c
     }
 }
 
+bool ifLastExist(int* array, int indexLast){
+    bool resp = false;
+    for(int x=0; x<indexLast && !resp; x++){
+        resp = array[x] == array[indexLast];
+    }
+    return resp;
+}
+
+void variacionSR(char* items,char** almacen,int n,int r,int* indexs,int i,int *cont){
+    if(i<r){
+        if(i==0){
+            initParams(r,&indexs,&cont);
+        }
+        indexs[i] = 0;
+        while(indexs[i]<n){
+            if(!ifLastExist(indexs,i)){
+                variacionSR(items,almacen,n,r,indexs,i+1,cont);
+            }
+            indexs[i] = indexs[i] + 1;
+        }
+    }else{
+        almacenando(items,almacen,r,indexs,cont);
+    }
+}
+
 void combinacionCR(char* items,char** almacen,int n,int r,int* indexs,int i,int *cont){
     if(i<r){
         if(i==0){
