@@ -16,6 +16,16 @@ int main(){
     cin>>n;
     cout<<"\n R:";
     cin>>r;
+
+    cout<<"\n Elementos disponibles: "<<n<<" => [";
+    for(int x=0; x<n; x++){
+        cout<<items[x];
+        if(x<n-1){
+            cout<<", ";
+        }else{
+            cout<<"]";
+        }
+    }
     
     printfVariacionCR(items,n,r);
     printfVariacionSR(items,n,r);
